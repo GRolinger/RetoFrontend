@@ -36,4 +36,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - facturas.ts modelo donde estan estructurado la forma que deben ir los datos
 - index Es donde esta la tabla que lista las facturas
 - form Esta el formulario que crea la factura
-

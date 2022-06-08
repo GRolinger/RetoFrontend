@@ -1,0 +1,22 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light-color bg-light mt-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo-sunnyapp.png" width="50">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <!--Menu de la izquierda-->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" colo="red" [routerLink]="['/facturacion']">Facturacion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" colo="red" [routerLink]="['/facturacion/crear']">Crear</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <!--Contenido-->
+   <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,30 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Clientes</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de clientes</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cliente</th>
+          <th>Total</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Tipo de Pago</th>
+          <th>Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let factura of facturas">
+          <td>{{ factura.id }}</td>
+          <td>{{ factura.cliente }}</td>
+          <td>{{ calcularTotal(factura.metadado) }}</td>
+          <td>{{ factura.fecha }}</td>
+          <td>{{ getEstado(factura.estado) }}</td>
+          <td>{{ getTipoPago(factura.tipo_pago) }}</td>
+          <td class="text-center"><button *ngIf="factura.estado == 1" class="btn btn-warning" role="button" (click)="cancelar(factura)" >Cancelar</button> <button class="btn btn-success" role="button" (click)="editar(factura.id)">Editar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
